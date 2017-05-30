@@ -52,7 +52,7 @@ public class UserRepositoryTest {
                 .build();
         rep.update(newUser);
         User updateUser = rep.read("moorcroft.g@gmail.com");
-        assertEquals("Inactive", updateUser.getStatus());
+        assertEquals(updateUser.getStatus(), "Inactive");
     }
 
     @Test(dependsOnMethods = "testUpdate")
